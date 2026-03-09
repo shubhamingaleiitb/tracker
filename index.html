@@ -15,9 +15,7 @@
     <a class="logo" href="index.html">RE<span>Tracker</span></a>
     <nav>
       <a href="index.html">Dashboard</a>
-      <a href="pages/track-a.html">Track A</a>
-      <a href="pages/track-b.html">Track B</a>
-      <a href="pages/projects.html">Projects</a>
+      <a href="pages/monthly-plan.html">Monthly Plan</a>
       <a href="pages/journal.html">Journal</a>
       <a href="pages/resources.html">Resources</a>
     </nav>
@@ -27,7 +25,7 @@
 <div class="container">
   <div class="page-header">
     <h1>Research Engineer Tracker</h1>
-    <p>Building the capability to understand, adapt, and create — Shubham Ingale</p>
+    <p>12 months. One focus per month. No overlapping timelines.</p>
   </div>
 
   <!-- Stat cards -->
@@ -85,7 +83,7 @@
 
   <!-- Section progress overview -->
   <div class="card">
-    <h2>Section Progress</h2>
+    <h2>Monthly Progress</h2>
     <div id="sectionOverview"></div>
   </div>
 
@@ -94,28 +92,52 @@
     <h2>12-Month Timeline</h2>
     <div class="timeline" id="timeline">
       <div class="timeline-item active">
-        <h4>Month 1–2 <span class="month-badge">Mar–Apr 2026</span></h4>
-        <p>OS foundations + Math foundations + Transformer implementation. OSTEP Part 1, optimization basics, attention from paper, 8–10 LeetCode.</p>
+        <h4>Month 1 <span class="month-badge">Mar 2026</span></h4>
+        <p>Math foundations — MML book, optimization, Adam paper, Boyd lectures 1–4, 3Blue1Brown.</p>
       </div>
       <div class="timeline-item">
-        <h4>Month 3–4 <span class="month-badge">May–Jun 2026</span></h4>
-        <p>Networking + PyTorch internals + Paper reading starts. HTTP/TCP, first custom autograd, first 3 papers read, Q1 project complete.</p>
+        <h4>Month 2 <span class="month-badge">Apr 2026</span></h4>
+        <p>Probability & information theory — MML Ch. 6, MacKay Ch. 1–4, KL divergence, VAE paper, Boyd 5–8.</p>
       </div>
       <div class="timeline-item">
-        <h4>Month 5–6 <span class="month-badge">Jul–Aug 2026</span></h4>
-        <p>GPU programming (Triton) + Training theory + Fine-tuning deep dive. First Triton kernel, LoRA understood mathematically, Q2 complete, 2+ blog posts.</p>
+        <h4>Month 3 <span class="month-badge">May 2026</span></h4>
+        <p>OS & memory — OSTEP Part 1 (Virtualization), virtual memory, processes vs threads, MIT 6.S081 Labs 1–2.</p>
       </div>
       <div class="timeline-item">
-        <h4>Month 7–8 <span class="month-badge">Sep–Oct 2026</span></h4>
-        <p>Distributed systems + Alignment papers + Inference engine project. Distributed training concepts, DPO derivation, minimal inference engine.</p>
+        <h4>Month 4 <span class="month-badge">Jun 2026</span></h4>
+        <p>OS concurrency & profiling — OSTEP Part 2, I/O, Linux profiling tools, MIT 6.S081 Labs 3–4.</p>
       </div>
       <div class="timeline-item">
-        <h4>Month 9–10 <span class="month-badge">Nov–Dec 2026</span></h4>
-        <p>Advanced inference + Frontier papers + Own project begins. Q3 complete, MoE/speculative decoding, own research question, 5+ blog posts.</p>
+        <h4>Month 5 <span class="month-badge">Jul 2026</span> <span class="badge badge-accent">PROJECT</span></h4>
+        <p>Transformer from scratch — read Attention paper, implement multi-head attention, full encoder-decoder, train, profile, blog post.</p>
       </div>
       <div class="timeline-item">
-        <h4>Month 11–12 <span class="month-badge">Jan–Feb 2027</span></h4>
-        <p>Own project + Portfolio consolidation + Interview prep. Q4 complete, 8+ posts, 3+ OSS contributions, 80–100 LeetCode, portfolio ready.</p>
+        <h4>Month 6 <span class="month-badge">Aug 2026</span></h4>
+        <p>Networking — Kurose & Ross, HPBN, TCP/IP, HTTP/2, gRPC, DNS, distributed consensus basics.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 7 <span class="month-badge">Sep 2026</span></h4>
+        <p>Paper reading & LoRA theory — reading system setup, LoRA, Flash Attention, QLoRA papers, variational methods.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 8 <span class="month-badge">Oct 2026</span> <span class="badge badge-accent">PROJECT</span></h4>
+        <p>Fine-tuning deep dive — full fine-tune vs LoRA vs QLoRA, analyze matrices, benchmark configs, blog post.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 9 <span class="month-badge">Nov 2026</span></h4>
+        <p>PyTorch internals & GPU programming — ezyang blog, CUDA guide, autograd, profiler, Flash Attention code, torch.compile.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 10 <span class="month-badge">Dec 2026</span></h4>
+        <p>GPU kernels & training theory — Triton tutorials, Karpathy Zero to Hero, nanoGPT, scaling laws, loss landscapes.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 11 <span class="month-badge">Jan 2027</span> <span class="badge badge-accent">PROJECT</span></h4>
+        <p>Inference engine — RLHF/DPO papers, build KV-cache, continuous batching, scheduler, blog post.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 12 <span class="month-badge">Feb 2027</span> <span class="badge badge-accent">PROJECT</span></h4>
+        <p>Frontier papers & own project — Constitutional AI, Switch Transformer, DeepSeek-V3, speculative decoding, own research project, blog post.</p>
       </div>
     </div>
   </div>
@@ -160,17 +182,19 @@
     let totalAll = 0, doneAll = 0;
 
     const sectionNames = {
-      'a1': 'A1 — OS & Memory',
-      'a2': 'A2 — Networking',
-      'a3': 'A3 — Low-Level PyTorch & GPU',
-      'a4': 'A4 — DSA',
-      'b1': 'B1 — Math for ML',
-      'b2': 'B2 — Paper Reading',
-      'b3': 'B3 — Model Training',
-      'q1': 'Q1 — Transformer from Scratch',
-      'q2': 'Q2 — Fine-tuning Deep Dive',
-      'q3': 'Q3 — Minimal Inference Engine',
-      'q4': 'Q4 — Your Own Idea',
+      'm1':  'Month 1 — Math Foundations',
+      'm2':  'Month 2 — Probability & Info Theory',
+      'm3':  'Month 3 — OS & Memory',
+      'm4':  'Month 4 — OS Concurrency & Profiling',
+      'm5':  'Month 5 — Transformer Project',
+      'm6':  'Month 6 — Networking',
+      'm7':  'Month 7 — Paper Reading & LoRA',
+      'm8':  'Month 8 — Fine-tuning Project',
+      'm9':  'Month 9 — PyTorch & GPU',
+      'm10': 'Month 10 — GPU Kernels & Training',
+      'm11': 'Month 11 — Inference Engine Project',
+      'm12': 'Month 12 — Frontier & Own Project',
+      'dsa': 'DSA (Ongoing)',
     };
 
     let html = '';
@@ -190,7 +214,7 @@
           </div>
         </div>`;
     }
-    container.innerHTML = html || '<p class="empty-state" style="padding:1rem;">Complete items in Track A, Track B, and Projects to see progress here.</p>';
+    container.innerHTML = html || '<p class="empty-state" style="padding:1rem;">Complete items in the Monthly Plan to see progress here.</p>';
 
     const overallPct = totalAll ? Math.round((doneAll / totalAll) * 100) : 0;
     document.getElementById('overallPct').textContent = overallPct + '%';

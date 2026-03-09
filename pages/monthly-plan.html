@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Plan — 12-Month Roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <a class="logo" href="../index.html">RE<span>Tracker</span></a>
+    <nav>
+      <a href="../index.html">Dashboard</a>
+      <a href="monthly-plan.html">Monthly Plan</a>
+      <a href="journal.html">Journal</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page-header">
+    <h1>12-Month Plan</h1>
+    <p>One month at a time. No overlapping phases. Each month has a clear focus with books, papers, videos, and hands-on work.</p>
+  </div>
+
+  <div class="page-progress" style="margin-bottom:1.5rem;">
+    <div class="progress-bar-wrap" style="height:10px;">
+      <div class="progress-bar-fill" style="width:0%"></div>
+    </div>
+    <div class="progress-label">0/0 items completed (0%)</div>
+  </div>
+
+  <!-- ===== MONTH 1 ===== -->
+  <div class="card" data-section="m1">
+    <h2 class="section-toggle">
+      Month 1 — Math Foundations
+      <span class="month-badge">Mar 2026</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m1-mml57">
+          <span class="item-text">
+            Read MML Ch. 5 (Vector Calculus) and Ch. 7 (Optimization)
+            <span class="tag tag-book">Book</span>
+            <a href="https://mml-book.github.io/book/mml-book.pdf" target="_blank" class="resource-link">MML Book</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m1-mml4">
+          <span class="item-text">
+            Read MML Ch. 4 — Eigendecomposition, SVD, matrix approximations
+            <span class="tag tag-book">Book</span>
+            <a href="https://mml-book.github.io/book/mml-book.pdf" target="_blank" class="resource-link">MML Book</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m1-3b1b">
+          <span class="item-text">
+            Watch 3Blue1Brown: Essence of Linear Algebra playlist
+            <span class="tag tag-video">Video</span>
+            <a href="https://www.youtube.com/c/3blue1brown" target="_blank" class="resource-link">YouTube</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m1-optim">
+          <span class="item-text">
+            Convex vs non-convex optimization, gradient descent variants, convergence
+            <span class="tag tag-book">Book</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m1-adam">
+          <span class="item-text">
+            Read Adam optimizer paper — understand why it works and when it doesn't
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/1412.6980" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m1-boyd">
+          <span class="item-text">
+            Watch Boyd's Convex Optimization lectures 1–4
+            <span class="tag tag-video">Video</span>
+            <a href="https://www.youtube.com/playlist?list=PL3940DD956CDF0622" target="_blank" class="resource-link">YouTube</a>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/6 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 2 ===== -->
+  <div class="card" data-section="m2">
+    <h2 class="section-toggle">
+      Month 2 — Probability & Information Theory
+      <span class="month-badge">Apr 2026</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m2-mml6">
+          <span class="item-text">
+            Read MML Ch. 6 — Probability and Distributions
+            <span class="tag tag-book">Book</span>
+            <a href="https://mml-book.github.io/book/mml-book.pdf" target="_blank" class="resource-link">MML Book</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m2-mackay">
+          <span class="item-text">
+            Read MacKay Ch. 1–4 — Entropy, mutual information
+            <span class="tag tag-book">Book</span>
+            <a href="https://www.inference.org.uk/itprnn/book.pdf" target="_blank" class="resource-link">MacKay PDF</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m2-kl">
+          <span class="item-text">
+            Understand KL divergence — not just as loss, but what it measures (MacKay Ch. 2)
+            <span class="tag tag-book">Book</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m2-vae">
+          <span class="item-text">
+            Read VAE paper — variational inference, ELBO basics
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/1312.6114" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m2-boyd2">
+          <span class="item-text">
+            Watch Boyd's Convex Optimization lectures 5–8
+            <span class="tag tag-video">Video</span>
+            <a href="https://www.youtube.com/playlist?list=PL3940DD956CDF0622" target="_blank" class="resource-link">YouTube</a>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/5 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 3 ===== -->
+  <div class="card" data-section="m3">
+    <h2 class="section-toggle">
+      Month 3 — Operating Systems & Memory
+      <span class="month-badge">May 2026</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m3-ostep1">
+          <span class="item-text">
+            Read OSTEP Part 1 — Virtualization (Ch. 3–24)
+            <span class="tag tag-book">Book</span>
+            <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" class="resource-link">OSTEP</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m3-vm">
+          <span class="item-text">
+            Virtual memory and paging — understand OOM behavior
+            <span class="tag tag-book">Book</span>
+            <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf" target="_blank" class="resource-link">OSTEP Ch. 15</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m3-proc">
+          <span class="item-text">
+            Processes vs threads — when to use multiprocessing vs threads
+            <span class="tag tag-book">Book</span>
+            <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf" target="_blank" class="resource-link">OSTEP Ch. 26</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m3-zines">
+          <span class="item-text">
+            Browse Julia Evans' Linux/systems zines for quick reference
+            <span class="tag tag-blog">Blog</span>
+            <a href="https://wizardzines.com/" target="_blank" class="resource-link">wizardzines.com</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m3-xv6-1">
+          <span class="item-text">
+            MIT 6.S081 Lab 1: Xv6 and Unix utilities
+            <span class="tag tag-course">Lab</span>
+            <a href="https://pdos.csail.mit.edu/6.S081/2021/labs/util.html" target="_blank" class="resource-link">Lab page</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m3-xv6-2">
+          <span class="item-text">
+            MIT 6.S081 Lab 2: System calls
+            <span class="tag tag-course">Lab</span>
+            <a href="https://pdos.csail.mit.edu/6.S081/2021/labs/syscall.html" target="_blank" class="resource-link">Lab page</a>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/6 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 4 ===== -->
+  <div class="card" data-section="m4">
+    <h2 class="section-toggle">
+      Month 4 — OS Concurrency & Profiling
+      <span class="month-badge">Jun 2026</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m4-ostep2">
+          <span class="item-text">
+            Read OSTEP Part 2 — Concurrency (Ch. 25–34)
+            <span class="tag tag-book">Book</span>
+            <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" class="resource-link">OSTEP</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m4-io">
+          <span class="item-text">
+            I/O and file systems — what's mmap? Why is loading model weights slow?
+            <span class="tag tag-book">Book</span>
+            <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf" target="_blank" class="resource-link">OSTEP Ch. 36</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m4-linux">
+          <span class="item-text">
+            Linux profiling tools — strace, perf, nvidia-smi, htop
+            <span class="tag tag-blog">Blog</span>
+            <a href="https://www.brendangregg.com/linuxperf.html" target="_blank" class="resource-link">Brendan Gregg</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m4-xv6-3">
+          <span class="item-text">
+            MIT 6.S081 Lab 3: Page tables
+            <span class="tag tag-course">Lab</span>
+            <a href="https://pdos.csail.mit.edu/6.S081/2021/labs/pgtbl.html" target="_blank" class="resource-link">Lab page</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m4-xv6-4">
+          <span class="item-text">
+            MIT 6.S081 Lab 4: Traps
+            <span class="tag tag-course">Lab</span>
+            <a href="https://pdos.csail.mit.edu/6.S081/2021/labs/traps.html" target="_blank" class="resource-link">Lab page</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m4-profile-practice">
+          <span class="item-text">
+            Practice: Profile a running service with strace/nvidia-smi. Trace a request end-to-end. Write up findings.
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/6 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 5 ===== -->
+  <div class="card" data-section="m5">
+    <h2 class="section-toggle">
+      Month 5 — Transformer from Scratch
+      <span class="month-badge badge-accent" style="background:var(--accent-glow);color:var(--accent-light);">Jul 2026 &middot; PROJECT</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m5-paper">
+          <span class="item-text">
+            Read "Attention Is All You Need" with pen and paper
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/1706.03762" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m5-attention">
+          <span class="item-text">
+            Implement multi-head attention from the paper (no tutorial)
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m5-posenc">
+          <span class="item-text">
+            Implement positional encoding (sinusoidal)
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m5-ffn">
+          <span class="item-text">
+            Implement feedforward blocks with residual connections and layer norm
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m5-full">
+          <span class="item-text">
+            Assemble full encoder-decoder architecture
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m5-train">
+          <span class="item-text">
+            Train on a simple translation or text generation task
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m5-profile">
+          <span class="item-text">
+            Profile with PyTorch profiler — where is time spent?
+            <span class="tag tag-code">Code</span>
+            <a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html" target="_blank" class="resource-link">Profiler Guide</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m5-blog">
+          <span class="item-text">
+            Write blog post: what you learned that the paper doesn't tell you
+            <span class="tag tag-blog">Blog</span>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/8 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 6 ===== -->
+  <div class="card" data-section="m6">
+    <h2 class="section-toggle">
+      Month 6 — Networking
+      <span class="month-badge">Aug 2026</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m6-kurose">
+          <span class="item-text">
+            Read Kurose & Ross Ch. 1–5 (or watch corresponding lectures)
+            <span class="tag tag-book">Book</span>
+            <a href="https://gaia.cs.umass.edu/kurose_ross/online_lectures.htm" target="_blank" class="resource-link">Online Lectures</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m6-hpbn">
+          <span class="item-text">
+            Read HPBN: TCP and HTTP/2 chapters
+            <span class="tag tag-book">Book</span>
+            <a href="https://hpbn.co/" target="_blank" class="resource-link">hpbn.co</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m6-hussain">
+          <span class="item-text">
+            Watch Hussain Nasser's HTTP, TCP, gRPC videos
+            <span class="tag tag-video">Video</span>
+            <a href="https://www.youtube.com/@habornetwork" target="_blank" class="resource-link">YouTube</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m6-tcp">
+          <span class="item-text">
+            TCP/IP fundamentals — understand the protocols APIs use
+            <span class="tag tag-book">Book</span>
+            <a href="https://hpbn.co/building-blocks-of-tcp/" target="_blank" class="resource-link">HPBN: TCP</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m6-http2">
+          <span class="item-text">
+            HTTP/2 and gRPC — protocols used in model serving
+            <span class="tag tag-book">Book</span>
+            <a href="https://hpbn.co/http2/" target="_blank" class="resource-link">HPBN: HTTP/2</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m6-latency">
+          <span class="item-text">
+            Latency analysis, load balancing, connection pooling
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m6-dns">
+          <span class="item-text">
+            DNS and how the internet works end-to-end
+            <a href="https://hpbn.co/primer-on-latency-and-bandwidth/" target="_blank" class="resource-link">HPBN: Latency</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m6-dist">
+          <span class="item-text">
+            Distributed consensus basics — CAP theorem, Raft overview
+            <a href="https://raft.github.io/" target="_blank" class="resource-link">Raft Visualization</a>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/8 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 7 ===== -->
+  <div class="card" data-section="m7">
+    <h2 class="section-toggle">
+      Month 7 — Paper Reading & LoRA Theory
+      <span class="month-badge">Sep 2026</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m7-system">
+          <span class="item-text">
+            Set up paper reading system: for each paper — summarize core idea, identify novel vs borrowed, note one thing you'd do differently
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m7-lora">
+          <span class="item-text">
+            Read LoRA paper — understand why low-rank adapters work mathematically
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2106.09685" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m7-flash">
+          <span class="item-text">
+            Read Flash Attention paper — memory-efficiency argument and tiling
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2205.14135" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m7-qlora">
+          <span class="item-text">
+            Read QLoRA paper
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2305.14314" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m7-linalg">
+          <span class="item-text">
+            Connect SVD/low-rank structure (from Month 1) to why LoRA works
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m7-variational">
+          <span class="item-text">
+            Variational methods: understand ELBO, variational inference basics
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/6 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 8 ===== -->
+  <div class="card" data-section="m8">
+    <h2 class="section-toggle">
+      Month 8 — Fine-tuning Deep Dive
+      <span class="month-badge badge-accent" style="background:var(--accent-glow);color:var(--accent-light);">Oct 2026 &middot; PROJECT</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m8-baseline">
+          <span class="item-text">
+            Fine-tune a small model with full fine-tuning — establish baseline
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m8-lora">
+          <span class="item-text">
+            Fine-tune the same model with LoRA on the same task
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m8-analyze">
+          <span class="item-text">
+            Analyze the learned LoRA matrices — what's their effective rank?
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m8-qlora">
+          <span class="item-text">
+            Experiment with QLoRA and different rank values / target modules
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m8-benchmark">
+          <span class="item-text">
+            Benchmark: inference latency, memory usage, quality metrics across configs
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m8-blog">
+          <span class="item-text">
+            Write blog post on parameter-efficient fine-tuning
+            <span class="tag tag-blog">Blog</span>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/6 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 9 ===== -->
+  <div class="card" data-section="m9">
+    <h2 class="section-toggle">
+      Month 9 — PyTorch Internals & GPU Programming
+      <span class="month-badge">Nov 2026</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m9-ezyang">
+          <span class="item-text">
+            Read ezyang's PyTorch Internals blog series
+            <span class="tag tag-blog">Blog</span>
+            <a href="http://blog.ezyang.com/2019/05/pytorch-internals/" target="_blank" class="resource-link">Blog</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m9-cuda">
+          <span class="item-text">
+            Read CUDA Programming Guide Ch. 1–5
+            <span class="tag tag-docs">Docs</span>
+            <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html" target="_blank" class="resource-link">CUDA Guide</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m9-autograd">
+          <span class="item-text">
+            Write custom autograd functions
+            <span class="tag tag-code">Code</span>
+            <a href="https://pytorch.org/docs/stable/notes/extending.html" target="_blank" class="resource-link">PyTorch Extending</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m9-profile">
+          <span class="item-text">
+            Profile a model forward pass with PyTorch profiler
+            <span class="tag tag-code">Code</span>
+            <a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html" target="_blank" class="resource-link">Profiler Recipe</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m9-flash-code">
+          <span class="item-text">
+            Read Flash Attention code — understand the tiling strategy
+            <span class="tag tag-code">Code</span>
+            <a href="https://github.com/Dao-AILab/flash-attention" target="_blank" class="resource-link">GitHub</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m9-compile">
+          <span class="item-text">
+            Experiment: compare eager mode vs torch.compile vs CUDA graphs
+            <span class="tag tag-code">Code</span>
+            <a href="https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html" target="_blank" class="resource-link">torch.compile</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m9-gpumode">
+          <span class="item-text">
+            Watch GPU Mode community lectures
+            <span class="tag tag-video">Video</span>
+            <a href="https://www.youtube.com/@GPUMODE" target="_blank" class="resource-link">YouTube</a>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/7 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 10 ===== -->
+  <div class="card" data-section="m10">
+    <h2 class="section-toggle">
+      Month 10 — GPU Kernels & Training Theory
+      <span class="month-badge">Dec 2026</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m10-triton-tut">
+          <span class="item-text">
+            Complete all Triton getting-started tutorials
+            <span class="tag tag-code">Code</span>
+            <a href="https://triton-lang.org/main/getting-started/tutorials/index.html" target="_blank" class="resource-link">Triton Tutorials</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m10-triton-attn">
+          <span class="item-text">
+            Implement a simple attention kernel in Triton
+            <span class="tag tag-code">Code</span>
+            <a href="https://triton-lang.org/main/getting-started/tutorials/06-fused-attention.html" target="_blank" class="resource-link">Triton Attention</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m10-karpathy">
+          <span class="item-text">
+            Complete Karpathy's Zero to Hero series (all videos)
+            <span class="tag tag-video">Video</span>
+            <a href="https://karpathy.ai/zero-to-hero.html" target="_blank" class="resource-link">Zero to Hero</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m10-nanogpt">
+          <span class="item-text">
+            Read every line of nanoGPT, understand design decisions
+            <span class="tag tag-code">Code</span>
+            <a href="https://github.com/karpathy/nanoGPT" target="_blank" class="resource-link">GitHub</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m10-loss">
+          <span class="item-text">
+            Loss landscapes and optimization dynamics — why does training sometimes diverge?
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m10-lr">
+          <span class="item-text">
+            Learning rate schedules and warmup — not just which to use, but why they work
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m10-chinchilla">
+          <span class="item-text">
+            Read Chinchilla paper — scaling laws, compute-optimal training
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2203.15556" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/7 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 11 ===== -->
+  <div class="card" data-section="m11">
+    <h2 class="section-toggle">
+      Month 11 — Inference Engine
+      <span class="month-badge badge-accent" style="background:var(--accent-glow);color:var(--accent-light);">Jan 2027 &middot; PROJECT</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m11-rlhf">
+          <span class="item-text">
+            Read InstructGPT / RLHF paper — how preference learning works
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2203.02155" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m11-dpo">
+          <span class="item-text">
+            Read DPO paper — follow full derivation, understand why it eliminates reward model
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2305.18290" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m11-kvcache">
+          <span class="item-text">
+            Implement basic KV-cache for autoregressive generation
+            <span class="tag tag-code">Code</span>
+            <a href="https://github.com/vllm-project/vllm" target="_blank" class="resource-link">vLLM reference</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m11-batch">
+          <span class="item-text">
+            Add simple continuous batching (batch new requests while others generate)
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m11-sched">
+          <span class="item-text">
+            Implement a basic scheduler that manages memory across concurrent requests
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m11-compare">
+          <span class="item-text">
+            Profile and compare against naive sequential generation
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m11-blog">
+          <span class="item-text">
+            Write blog post on building a minimal inference server
+            <span class="tag tag-blog">Blog</span>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/7 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MONTH 12 ===== -->
+  <div class="card" data-section="m12">
+    <h2 class="section-toggle">
+      Month 12 — Frontier Papers & Own Project
+      <span class="month-badge badge-accent" style="background:var(--accent-glow);color:var(--accent-light);">Feb 2027 &middot; PROJECT</span>
+    </h2>
+    <div class="section-content">
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="m12-cai">
+          <span class="item-text">
+            Read Constitutional AI paper
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2212.08073" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-switch">
+          <span class="item-text">
+            Read Switch Transformer — MoE foundations
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2101.03961" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-dsv3">
+          <span class="item-text">
+            Read DeepSeek-V3 MoE architecture
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2412.19437" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-speculative">
+          <span class="item-text">
+            Read Speculative Decoding paper + implement toy version
+            <span class="tag tag-paper">Paper</span>
+            <a href="https://arxiv.org/abs/2302.01318" target="_blank" class="resource-link">arXiv</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-bitter">
+          <span class="item-text">
+            Read The Bitter Lesson and reflect on its implications
+            <span class="tag tag-essay">Essay</span>
+            <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank" class="resource-link">Essay</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-own-papers">
+          <span class="item-text">
+            Read 3 recent papers in area of interest
+            <span class="tag tag-paper">Paper</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-idea">
+          <span class="item-text">
+            Define research question / project idea + literature review
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-impl">
+          <span class="item-text">
+            Implement core experiment / prototype
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-writeup">
+          <span class="item-text">
+            Write thorough blog post / technical report
+            <span class="tag tag-blog">Blog</span>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="m12-oss">
+          <span class="item-text">
+            Open-source the code with good documentation
+            <span class="tag tag-code">Code</span>
+          </span>
+        </li>
+      </ul>
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/10 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DSA (Ongoing) ===== -->
+  <div class="card" data-section="dsa">
+    <h2 class="section-toggle">
+      DSA — Data Structures & Algorithms
+      <span class="month-badge">Ongoing &middot; 2–3 problems/week</span>
+    </h2>
+    <div class="section-content">
+      <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:1rem;">
+        Steady practice throughout the year. Target ~100 problems. Use Neetcode 150 as the guide.
+      </p>
+
+      <h3>Resources</h3>
+      <table class="resource-table">
+        <thead><tr><th>Resource</th><th>Type</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://neetcode.io/practice" target="_blank">Neetcode 150</a></td>
+            <td><span class="tag tag-code">Practice</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://neetcode.io/roadmap" target="_blank">Neetcode Roadmap</a></td>
+            <td><span class="tag tag-video">Video + Practice</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Pattern Checklist</h3>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="dsa-arrays">
+          <span class="item-text">Arrays & Hashing — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-twoptr">
+          <span class="item-text">Two Pointers — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-sliding">
+          <span class="item-text">Sliding Window — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-stack">
+          <span class="item-text">Stack — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-binary">
+          <span class="item-text">Binary Search — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-linked">
+          <span class="item-text">Linked List — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-trees">
+          <span class="item-text">Trees — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-tries">
+          <span class="item-text">Tries — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-heap">
+          <span class="item-text">Heap / Priority Queue — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-backtrack">
+          <span class="item-text">Backtracking — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-graphs">
+          <span class="item-text">Graphs — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-dp">
+          <span class="item-text">Dynamic Programming — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-greedy">
+          <span class="item-text">Greedy — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-intervals">
+          <span class="item-text">Intervals — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="dsa-bit">
+          <span class="item-text">Bit Manipulation — complete Neetcode section</span>
+        </li>
+      </ul>
+
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/15 completed</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/store.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>
