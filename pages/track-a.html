@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track A — Engineering Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <a class="logo" href="../index.html">RE<span>Tracker</span></a>
+    <nav>
+      <a href="../index.html">Dashboard</a>
+      <a href="track-a.html">Track A</a>
+      <a href="track-b.html">Track B</a>
+      <a href="projects.html">Projects</a>
+      <a href="journal.html">Journal</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Track A — Engineering Foundation</h1>
+    <p>Systems thinking, DSA, low-level PyTorch, infrastructure. The "make it real and fast" muscle.</p>
+  </div>
+
+  <div class="page-progress" style="margin-bottom:1.5rem;">
+    <div class="progress-bar-wrap" style="height:10px;">
+      <div class="progress-bar-fill" style="width:0%"></div>
+    </div>
+    <div class="progress-label">0/0 items completed (0%)</div>
+  </div>
+
+  <!-- ===== A1: OS & Memory ===== -->
+  <div class="card" data-section="a1">
+    <h2 class="section-toggle">
+      A1. Operating Systems & Memory
+      <span class="month-badge">Months 1–3</span>
+    </h2>
+    <div class="section-content">
+      <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:1rem;">
+        When you deployed DeepSeek-OCR on RunPod and hit flash-attention issues, the root cause was a systems problem.
+        Understanding OS fundamentals makes you dangerous in debugging.
+      </p>
+
+      <h3>Resources</h3>
+      <table class="resource-table">
+        <thead><tr><th>Resource</th><th>Type</th><th>Why It Matters</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank">OSTEP (free online)</a></td>
+            <td><span class="tag tag-book">Book</span></td>
+            <td>Best OS textbook; focus on virtualization and concurrency chapters</td>
+          </tr>
+          <tr>
+            <td><a href="https://pdos.csail.mit.edu/6.S081/2021/schedule.html" target="_blank">MIT 6.S081 Labs</a></td>
+            <td><span class="tag tag-course">Course</span></td>
+            <td>Hands-on xv6 labs; do at least the first 4</td>
+          </tr>
+          <tr>
+            <td><a href="https://wizardzines.com/" target="_blank">Julia Evans' Zines</a></td>
+            <td><span class="tag tag-blog">Visual</span></td>
+            <td>Bite-sized Linux/systems concepts for quick reference</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>What to Focus On</h3>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="a1-vm">
+          <span class="item-text">
+            Virtual memory and paging — understand why models OOM and what's actually happening
+            <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf" target="_blank" class="resource-link">OSTEP Ch. 15</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-proc">
+          <span class="item-text">
+            Processes vs threads — why vLLM uses multiprocessing, why not threads?
+            <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf" target="_blank" class="resource-link">OSTEP Ch. 26</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-io">
+          <span class="item-text">
+            I/O and file systems — why is loading model weights slow? What's mmap?
+            <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf" target="_blank" class="resource-link">OSTEP Ch. 36</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-linux">
+          <span class="item-text">
+            Linux profiling tools — strace, perf, nvidia-smi, htop on your own running services
+            <a href="https://www.brendangregg.com/linuxperf.html" target="_blank" class="resource-link">Brendan Gregg's Linux Perf</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-ostep-p1">
+          <span class="item-text">Complete OSTEP Part 1 — Virtualization (Chapters 3–24)</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-ostep-p2">
+          <span class="item-text">Complete OSTEP Part 2 — Concurrency (Chapters 25–34)</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-xv6-1">
+          <span class="item-text">
+            MIT 6.S081 Lab 1: Xv6 and Unix utilities
+            <a href="https://pdos.csail.mit.edu/6.S081/2021/labs/util.html" target="_blank" class="resource-link">Lab page</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-xv6-2">
+          <span class="item-text">
+            MIT 6.S081 Lab 2: System calls
+            <a href="https://pdos.csail.mit.edu/6.S081/2021/labs/syscall.html" target="_blank" class="resource-link">Lab page</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-xv6-3">
+          <span class="item-text">
+            MIT 6.S081 Lab 3: Page tables
+            <a href="https://pdos.csail.mit.edu/6.S081/2021/labs/pgtbl.html" target="_blank" class="resource-link">Lab page</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-xv6-4">
+          <span class="item-text">
+            MIT 6.S081 Lab 4: Traps
+            <a href="https://pdos.csail.mit.edu/6.S081/2021/labs/traps.html" target="_blank" class="resource-link">Lab page</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a1-practice">
+          <span class="item-text">
+            Practice: Profile DeepSeek-OCR deployment with strace/nvidia-smi. Trace a single inference request from API call to GPU execution. Write up findings.
+          </span>
+        </li>
+      </ul>
+
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/11 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== A2: Networking ===== -->
+  <div class="card" data-section="a2">
+    <h2 class="section-toggle">
+      A2. Networking & Distributed Systems Basics
+      <span class="month-badge">Months 2–4</span>
+    </h2>
+    <div class="section-content">
+      <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:1rem;">
+        Every model serving setup involves networking. Your FastAPI + vLLM deployment on RunPod is a distributed system in miniature.
+      </p>
+
+      <h3>Resources</h3>
+      <table class="resource-table">
+        <thead><tr><th>Resource</th><th>Type</th><th>Why It Matters</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://gaia.cs.umass.edu/kurose_ross/online_lectures.htm" target="_blank">Computer Networking: Top-Down Approach</a></td>
+            <td><span class="tag tag-book">Book</span></td>
+            <td>Chapters 1–5; understand TCP/IP, HTTP, DNS</td>
+          </tr>
+          <tr>
+            <td><a href="https://hpbn.co/" target="_blank">High Performance Browser Networking</a></td>
+            <td><span class="tag tag-book">Free Book</span></td>
+            <td>Practical web networking — free online at hpbn.co</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.youtube.com/@habornetwork" target="_blank">Hussain Nasser (YouTube)</a></td>
+            <td><span class="tag tag-video">Video</span></td>
+            <td>Excellent HTTP, TCP, gRPC explanations</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>What to Focus On</h3>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="a2-tcp">
+          <span class="item-text">
+            TCP/IP fundamentals — understand the protocols your APIs use
+            <a href="https://hpbn.co/building-blocks-of-tcp/" target="_blank" class="resource-link">HPBN: TCP</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a2-http2">
+          <span class="item-text">
+            HTTP/2 and gRPC — the protocols used in model serving
+            <a href="https://hpbn.co/http2/" target="_blank" class="resource-link">HPBN: HTTP/2</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a2-latency">
+          <span class="item-text">Latency analysis — where does time go in a network request?</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a2-lb">
+          <span class="item-text">Load balancing and connection pooling — relevant for scaling model serving</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a2-dist">
+          <span class="item-text">
+            Basics of distributed consensus — understand trade-offs (CAP, Raft overview)
+            <a href="https://raft.github.io/" target="_blank" class="resource-link">Raft Visualization</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a2-dns">
+          <span class="item-text">
+            DNS and how the internet works end-to-end
+            <a href="https://hpbn.co/primer-on-latency-and-bandwidth/" target="_blank" class="resource-link">HPBN: Latency & Bandwidth</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a2-kurose-ch1-5">
+          <span class="item-text">
+            Read Kurose & Ross Chapters 1–5 (or watch corresponding lectures)
+            <a href="https://gaia.cs.umass.edu/kurose_ross/online_lectures.htm" target="_blank" class="resource-link">Online Lectures</a>
+          </span>
+        </li>
+      </ul>
+
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/7 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== A3: Low-Level PyTorch & GPU ===== -->
+  <div class="card" data-section="a3">
+    <h2 class="section-toggle">
+      A3. Low-Level PyTorch & GPU Programming
+      <span class="month-badge">Months 3–6</span>
+    </h2>
+    <div class="section-content">
+      <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:1rem;">
+        The engineering skill that most directly separates research engineers from application engineers.
+        The people building DeepSeek-V3's MoE routing or Anthropic's inference stack understand computation at the GPU level.
+      </p>
+
+      <h3>Resources</h3>
+      <table class="resource-table">
+        <thead><tr><th>Resource</th><th>Type</th><th>Why It Matters</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="http://blog.ezyang.com/2019/05/pytorch-internals/" target="_blank">PyTorch Internals (ezyang)</a></td>
+            <td><span class="tag tag-blog">Blog</span></td>
+            <td>Edward Yang's deep dive into PyTorch's architecture</td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html" target="_blank">CUDA Programming Guide</a></td>
+            <td><span class="tag tag-docs">Docs</span></td>
+            <td>NVIDIA's official guide; read the first 5 chapters</td>
+          </tr>
+          <tr>
+            <td><a href="https://triton-lang.org/main/getting-started/tutorials/index.html" target="_blank">Triton Tutorials</a></td>
+            <td><span class="tag tag-code">Code</span></td>
+            <td>Write GPU kernels in Python; lower barrier than raw CUDA</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.youtube.com/@GPUMODE" target="_blank">GPU Mode (YouTube)</a></td>
+            <td><span class="tag tag-video">Video</span></td>
+            <td>Community lectures on GPU programming for ML</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>What to Build Progressively</h3>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="a3-autograd">
+          <span class="item-text">
+            Write custom autograd functions for operations you use
+            <a href="https://pytorch.org/docs/stable/notes/extending.html" target="_blank" class="resource-link">PyTorch Extending Guide</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a3-triton">
+          <span class="item-text">
+            Implement a simple attention kernel in Triton
+            <a href="https://triton-lang.org/main/getting-started/tutorials/06-fused-attention.html" target="_blank" class="resource-link">Triton Attention Tutorial</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a3-profile">
+          <span class="item-text">
+            Profile a model forward pass with PyTorch profiler — understand where time goes
+            <a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html" target="_blank" class="resource-link">PyTorch Profiler Recipe</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a3-flash">
+          <span class="item-text">
+            Read Flash Attention's code and understand the tiling strategy
+            <a href="https://github.com/Dao-AILab/flash-attention" target="_blank" class="resource-link">Flash Attention Repo</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a3-compile">
+          <span class="item-text">
+            Experiment: compare eager mode vs torch.compile vs CUDA graphs
+            <a href="https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html" target="_blank" class="resource-link">torch.compile Tutorial</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a3-ezyang">
+          <span class="item-text">
+            Read ezyang's PyTorch Internals blog series
+            <a href="http://blog.ezyang.com/2019/05/pytorch-internals/" target="_blank" class="resource-link">Blog</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a3-cuda-ch1-5">
+          <span class="item-text">
+            Read CUDA Programming Guide chapters 1–5
+            <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html" target="_blank" class="resource-link">CUDA Guide</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a3-triton-tut">
+          <span class="item-text">
+            Complete all Triton getting-started tutorials
+            <a href="https://triton-lang.org/main/getting-started/tutorials/index.html" target="_blank" class="resource-link">Triton Tutorials</a>
+          </span>
+        </li>
+      </ul>
+
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/8 completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== A4: DSA ===== -->
+  <div class="card" data-section="a4">
+    <h2 class="section-toggle">
+      A4. Data Structures & Algorithms
+      <span class="month-badge">Ongoing</span>
+    </h2>
+    <div class="section-content">
+      <p style="color:var(--text-dim);font-size:0.88rem;margin-bottom:1rem;">
+        2–3 problems per week. Focus on trees, graphs, dynamic programming. Target ~100 problems over the year.
+      </p>
+
+      <h3>Resources</h3>
+      <table class="resource-table">
+        <thead><tr><th>Resource</th><th>Type</th><th>Why It Matters</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="https://neetcode.io/practice" target="_blank">Neetcode 150</a></td>
+            <td><span class="tag tag-code">Practice</span></td>
+            <td>Curated problems covering major patterns</td>
+          </tr>
+          <tr>
+            <td><a href="https://neetcode.io/roadmap" target="_blank">Neetcode Roadmap</a></td>
+            <td><span class="tag tag-video">Video + Practice</span></td>
+            <td>Visual explanations with Python solutions</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Pattern Checklist</h3>
+      <ul class="checklist">
+        <li>
+          <input type="checkbox" data-id="a4-arrays">
+          <span class="item-text">
+            Arrays & Hashing — complete Neetcode section
+            <a href="https://neetcode.io/roadmap" target="_blank" class="resource-link">Neetcode</a>
+          </span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-twoptr">
+          <span class="item-text">Two Pointers — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-sliding">
+          <span class="item-text">Sliding Window — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-stack">
+          <span class="item-text">Stack — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-binary">
+          <span class="item-text">Binary Search — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-linked">
+          <span class="item-text">Linked List — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-trees">
+          <span class="item-text">Trees (focus area) — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-tries">
+          <span class="item-text">Tries — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-heap">
+          <span class="item-text">Heap / Priority Queue — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-backtrack">
+          <span class="item-text">Backtracking — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-graphs">
+          <span class="item-text">Graphs (focus area) — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-dp">
+          <span class="item-text">Dynamic Programming (don't skip!) — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-greedy">
+          <span class="item-text">Greedy — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-intervals">
+          <span class="item-text">Intervals — complete Neetcode section</span>
+        </li>
+        <li>
+          <input type="checkbox" data-id="a4-bit">
+          <span class="item-text">Bit Manipulation — complete Neetcode section</span>
+        </li>
+      </ul>
+
+      <div class="flex-between mt-1">
+        <div class="progress-bar-wrap" style="flex:1;max-width:300px;">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+        <span class="progress-label">0/15 completed</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/store.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

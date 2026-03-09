@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Resources</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <a class="logo" href="../index.html">RE<span>Tracker</span></a>
+    <nav>
+      <a href="../index.html">Dashboard</a>
+      <a href="track-a.html">Track A</a>
+      <a href="track-b.html">Track B</a>
+      <a href="projects.html">Projects</a>
+      <a href="journal.html">Journal</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page-header">
+    <h1>All Resources</h1>
+    <p>Every book, course, paper, video, and tool from your roadmap in one place. Click to open.</p>
+  </div>
+
+  <!-- ===== Books & Textbooks ===== -->
+  <div class="card">
+    <h2>Books & Textbooks</h2>
+    <table class="resource-table">
+      <thead><tr><th>Resource</th><th>Section</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank">OSTEP — Operating Systems: Three Easy Pieces</a></td>
+          <td><span class="tag tag-book">A1</span></td>
+          <td>Best OS textbook. Focus on virtualization & concurrency.</td>
+        </tr>
+        <tr>
+          <td><a href="https://gaia.cs.umass.edu/kurose_ross/online_lectures.htm" target="_blank">Computer Networking: A Top-Down Approach (Kurose & Ross)</a></td>
+          <td><span class="tag tag-book">A2</span></td>
+          <td>Chapters 1–5. TCP/IP, HTTP, DNS.</td>
+        </tr>
+        <tr>
+          <td><a href="https://hpbn.co/" target="_blank">High Performance Browser Networking</a></td>
+          <td><span class="tag tag-book">A2</span></td>
+          <td>Free online. Practical web networking.</td>
+        </tr>
+        <tr>
+          <td><a href="https://mml-book.github.io/" target="_blank">Mathematics for Machine Learning (Deisenroth et al.)</a></td>
+          <td><span class="tag tag-book">B1</span></td>
+          <td>Free online. Chapters 5–7 on optimization & probability.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.inference.org.uk/itprnn/book.pdf" target="_blank">Information Theory, Inference and Learning (MacKay)</a></td>
+          <td><span class="tag tag-book">B1</span></td>
+          <td>Chapters 1–6. Deep intuition for information theory.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== Courses & Lectures ===== -->
+  <div class="card">
+    <h2>Courses & Lectures</h2>
+    <table class="resource-table">
+      <thead><tr><th>Resource</th><th>Section</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://pdos.csail.mit.edu/6.S081/2021/schedule.html" target="_blank">MIT 6.S081: Operating System Engineering</a></td>
+          <td><span class="tag tag-course">A1</span></td>
+          <td>xv6 labs. Do at least the first 4.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.youtube.com/playlist?list=PL3940DD956CDF0622" target="_blank">Boyd's Convex Optimization (Stanford)</a></td>
+          <td><span class="tag tag-course">B1</span></td>
+          <td>First 8 lectures. Optimization landscape.</td>
+        </tr>
+        <tr>
+          <td><a href="https://karpathy.ai/zero-to-hero.html" target="_blank">Karpathy's Neural Networks: Zero to Hero</a></td>
+          <td><span class="tag tag-course">B3</span></td>
+          <td>Build everything from scratch. The gold standard.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== Video Channels ===== -->
+  <div class="card">
+    <h2>Video Channels</h2>
+    <table class="resource-table">
+      <thead><tr><th>Channel</th><th>Section</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://www.youtube.com/@habornetwork" target="_blank">Hussain Nasser</a></td>
+          <td><span class="tag tag-video">A2</span></td>
+          <td>HTTP, TCP, gRPC explanations</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.youtube.com/@GPUMODE" target="_blank">GPU Mode</a></td>
+          <td><span class="tag tag-video">A3</span></td>
+          <td>GPU programming for ML community lectures</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.youtube.com/c/3blue1brown" target="_blank">3Blue1Brown</a></td>
+          <td><span class="tag tag-video">B1</span></td>
+          <td>Visual intuition for abstract math concepts</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== Papers ===== -->
+  <div class="card">
+    <h2>Papers — Reading List</h2>
+    <table class="resource-table">
+      <thead><tr><th>Paper</th><th>Year</th><th>Phase</th><th>Key Idea</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention Is All You Need</a></td>
+          <td>2017</td>
+          <td><span class="tag tag-paper">Foundation</span></td>
+          <td>The transformer architecture</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2106.09685" target="_blank">LoRA: Low-Rank Adaptation</a></td>
+          <td>2021</td>
+          <td><span class="tag tag-paper">Foundation</span></td>
+          <td>Parameter-efficient fine-tuning via low-rank adapters</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2205.14135" target="_blank">Flash Attention</a></td>
+          <td>2022</td>
+          <td><span class="tag tag-paper">Foundation</span></td>
+          <td>IO-aware exact attention with tiling</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/1412.6980" target="_blank">Adam Optimizer</a></td>
+          <td>2014</td>
+          <td><span class="tag tag-paper">Math</span></td>
+          <td>Adaptive learning rates</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/1312.6114" target="_blank">VAE (Kingma & Welling)</a></td>
+          <td>2013</td>
+          <td><span class="tag tag-paper">Math</span></td>
+          <td>Variational inference, ELBO</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2203.02155" target="_blank">InstructGPT / RLHF</a></td>
+          <td>2022</td>
+          <td><span class="tag tag-paper">Alignment</span></td>
+          <td>Training LLMs with human feedback</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2305.18290" target="_blank">DPO: Direct Preference Optimization</a></td>
+          <td>2023</td>
+          <td><span class="tag tag-paper">Alignment</span></td>
+          <td>Eliminates reward model from RLHF</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2212.08073" target="_blank">Constitutional AI (Anthropic)</a></td>
+          <td>2022</td>
+          <td><span class="tag tag-paper">Alignment</span></td>
+          <td>Self-supervised alignment approach</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2203.15556" target="_blank">Chinchilla (Scaling Laws)</a></td>
+          <td>2022</td>
+          <td><span class="tag tag-paper">Training</span></td>
+          <td>Compute-optimal training</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2305.14314" target="_blank">QLoRA</a></td>
+          <td>2023</td>
+          <td><span class="tag tag-paper">Fine-tuning</span></td>
+          <td>Quantized LoRA fine-tuning</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2101.03961" target="_blank">Switch Transformer</a></td>
+          <td>2021</td>
+          <td><span class="tag tag-paper">Frontier</span></td>
+          <td>Mixture of Experts foundations</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2412.19437" target="_blank">DeepSeek-V3</a></td>
+          <td>2024</td>
+          <td><span class="tag tag-paper">Frontier</span></td>
+          <td>Advanced MoE architecture</td>
+        </tr>
+        <tr>
+          <td><a href="https://arxiv.org/abs/2302.01318" target="_blank">Speculative Decoding</a></td>
+          <td>2023</td>
+          <td><span class="tag tag-paper">Frontier</span></td>
+          <td>Inference acceleration via draft models</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== Code & Tools ===== -->
+  <div class="card">
+    <h2>Code & Tools</h2>
+    <table class="resource-table">
+      <thead><tr><th>Resource</th><th>Section</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://neetcode.io/practice" target="_blank">Neetcode 150</a></td>
+          <td><span class="tag tag-code">A4</span></td>
+          <td>Curated LeetCode problems by pattern</td>
+        </tr>
+        <tr>
+          <td><a href="https://neetcode.io/roadmap" target="_blank">Neetcode Roadmap</a></td>
+          <td><span class="tag tag-code">A4</span></td>
+          <td>Visual roadmap with video explanations</td>
+        </tr>
+        <tr>
+          <td><a href="https://triton-lang.org/main/getting-started/tutorials/index.html" target="_blank">Triton Tutorials</a></td>
+          <td><span class="tag tag-code">A3</span></td>
+          <td>GPU kernels in Python</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/karpathy/nanoGPT" target="_blank">nanoGPT (Karpathy)</a></td>
+          <td><span class="tag tag-code">B3</span></td>
+          <td>Read every line. Minimalist GPT training.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Dao-AILab/flash-attention" target="_blank">Flash Attention</a></td>
+          <td><span class="tag tag-code">A3</span></td>
+          <td>Reference implementation of tiled attention</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/vllm-project/vllm" target="_blank">vLLM</a></td>
+          <td><span class="tag tag-code">Q3</span></td>
+          <td>Reference for inference engine project</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== Blogs & Docs ===== -->
+  <div class="card">
+    <h2>Blogs & Documentation</h2>
+    <table class="resource-table">
+      <thead><tr><th>Resource</th><th>Section</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="http://blog.ezyang.com/2019/05/pytorch-internals/" target="_blank">PyTorch Internals (ezyang)</a></td>
+          <td><span class="tag tag-blog">A3</span></td>
+          <td>Deep dive into PyTorch architecture</td>
+        </tr>
+        <tr>
+          <td><a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html" target="_blank">CUDA Programming Guide</a></td>
+          <td><span class="tag tag-docs">A3</span></td>
+          <td>First 5 chapters</td>
+        </tr>
+        <tr>
+          <td><a href="https://pytorch.org/docs/stable/notes/extending.html" target="_blank">PyTorch Extending Guide</a></td>
+          <td><span class="tag tag-docs">A3</span></td>
+          <td>Custom autograd functions</td>
+        </tr>
+        <tr>
+          <td><a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html" target="_blank">PyTorch Profiler Recipe</a></td>
+          <td><span class="tag tag-docs">A3</span></td>
+          <td>Performance profiling</td>
+        </tr>
+        <tr>
+          <td><a href="https://pytorch.org/tutorials/intermediate/torch_compile_tutorial.html" target="_blank">torch.compile Tutorial</a></td>
+          <td><span class="tag tag-docs">A3</span></td>
+          <td>Compilation modes comparison</td>
+        </tr>
+        <tr>
+          <td><a href="https://wizardzines.com/" target="_blank">Julia Evans' Zines</a></td>
+          <td><span class="tag tag-blog">A1</span></td>
+          <td>Bite-sized Linux/systems concepts</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.brendangregg.com/linuxperf.html" target="_blank">Brendan Gregg's Linux Performance</a></td>
+          <td><span class="tag tag-blog">A1</span></td>
+          <td>Linux profiling tools reference</td>
+        </tr>
+        <tr>
+          <td><a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank">The Bitter Lesson (Rich Sutton)</a></td>
+          <td><span class="tag tag-essay">B3</span></td>
+          <td>Fundamental perspective on AI progress</td>
+        </tr>
+        <tr>
+          <td><a href="https://raft.github.io/" target="_blank">Raft Consensus Visualization</a></td>
+          <td><span class="tag tag-docs">A2</span></td>
+          <td>Interactive distributed consensus demo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== Staying Current ===== -->
+  <div class="card">
+    <h2>Staying Current</h2>
+    <h3>Tools</h3>
+    <table class="resource-table">
+      <tbody>
+        <tr>
+          <td><a href="https://arxiv-sanity-lite.com/" target="_blank">Arxiv Sanity Lite</a></td>
+          <td>Weekly paper discovery</td>
+        </tr>
+        <tr>
+          <td><a href="https://paperswithcode.com/" target="_blank">Papers With Code</a></td>
+          <td>Papers + implementations together</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>People to Follow</h3>
+    <table class="resource-table">
+      <tbody>
+        <tr>
+          <td><a href="https://twitter.com/kabornetwork" target="_blank">Andrej Karpathy</a></td>
+          <td>Neural networks, education</td>
+        </tr>
+        <tr>
+          <td><a href="https://twitter.com/tri_dao" target="_blank">Tri Dao</a></td>
+          <td>Flash Attention creator</td>
+        </tr>
+        <tr>
+          <td><a href="https://twitter.com/srabornewhite" target="_blank">Sasha Rush</a></td>
+          <td>NLP, efficient transformers</td>
+        </tr>
+        <tr>
+          <td><a href="https://twitter.com/simonw" target="_blank">Simon Willison</a></td>
+          <td>AI tools, practical AI</td>
+        </tr>
+        <tr>
+          <td><a href="https://twitter.com/chiphuyen" target="_blank">Chip Huyen</a></td>
+          <td>ML systems, MLOps</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Podcasts</h3>
+    <table class="resource-table">
+      <tbody>
+        <tr>
+          <td><a href="https://www.latent.space/podcast" target="_blank">Latent Space</a></td>
+          <td>AI engineering deep dives</td>
+        </tr>
+        <tr>
+          <td><a href="https://wandb.ai/fully-connected/gradient-dissent" target="_blank">Gradient Dissent</a></td>
+          <td>ML practitioners interviews</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.youtube.com/@MachineLearningStreetTalk" target="_blank">Machine Learning Street Talk</a></td>
+          <td>Technical ML discussions</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Communities</h3>
+    <table class="resource-table">
+      <tbody>
+        <tr>
+          <td><a href="https://discord.gg/gpumode" target="_blank">GPU Mode Discord</a></td>
+          <td>GPU programming community</td>
+        </tr>
+        <tr>
+          <td><a href="https://discord.gg/eleutherai" target="_blank">EleutherAI Discord</a></td>
+          <td>Open-source AI research</td>
+        </tr>
+        <tr>
+          <td><a href="https://mlcollective.org/" target="_blank">ML Collective</a></td>
+          <td>Collaborative ML research</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== Open Source Targets ===== -->
+  <div class="card">
+    <h2>Open Source Contribution Targets</h2>
+    <table class="resource-table">
+      <thead><tr><th>Project</th><th>Why</th><th>Start With</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/vllm-project/vllm/labels/good%20first%20issue" target="_blank">vLLM</a></td>
+          <td>You already use it. Inference optimization.</td>
+          <td>Issues tagged "good first issue"</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/huggingface/transformers/labels/Good%20First%20Issue" target="_blank">HuggingFace Transformers</a></td>
+          <td>Contributing model implementations is a strong signal.</td>
+          <td>Good first issues, new model contributions</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/pytorch/pytorch/labels/good%20first%20issue" target="_blank">PyTorch</a></td>
+          <td>Ambitious but even small contributions carry credibility.</td>
+          <td>Good first issues</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="../js/store.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

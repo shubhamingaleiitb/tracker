@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Engineer Tracker — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <a class="logo" href="index.html">RE<span>Tracker</span></a>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="pages/track-a.html">Track A</a>
+      <a href="pages/track-b.html">Track B</a>
+      <a href="pages/projects.html">Projects</a>
+      <a href="pages/journal.html">Journal</a>
+      <a href="pages/resources.html">Resources</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Research Engineer Tracker</h1>
+    <p>Building the capability to understand, adapt, and create — Shubham Ingale</p>
+  </div>
+
+  <!-- Stat cards -->
+  <div class="stat-grid" id="statGrid">
+    <div class="stat-card">
+      <div class="stat-value" id="overallPct">0%</div>
+      <div class="stat-label">Overall Progress</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="leetcodeCount">0</div>
+      <div class="stat-label">LeetCode Problems <span style="font-size:0.65rem;opacity:0.6">/100</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="papersCount">0</div>
+      <div class="stat-label">Papers Read</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="blogCount">0</div>
+      <div class="stat-label">Blog Posts <span style="font-size:0.65rem;opacity:0.6">/8+</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="ossCount">0</div>
+      <div class="stat-label">OSS Contributions</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="journalCount">0</div>
+      <div class="stat-label">Journal Entries</div>
+    </div>
+  </div>
+
+  <!-- Editable counters -->
+  <div class="card">
+    <h2>Update Counters</h2>
+    <p style="color:var(--text-dim);font-size:0.85rem;margin-bottom:1rem;">Track metrics that aren't tied to checklist items.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <div class="form-group" style="flex:1;min-width:140px;">
+        <label>LeetCode Solved</label>
+        <input type="number" id="leetcodeInput" min="0" max="999" style="width:100%">
+      </div>
+      <div class="form-group" style="flex:1;min-width:140px;">
+        <label>Papers Read</label>
+        <input type="number" id="papersInput" min="0" max="999" style="width:100%">
+      </div>
+      <div class="form-group" style="flex:1;min-width:140px;">
+        <label>Blog Posts</label>
+        <input type="number" id="blogInput" min="0" max="999" style="width:100%">
+      </div>
+      <div class="form-group" style="flex:1;min-width:140px;">
+        <label>OSS Contributions</label>
+        <input type="number" id="ossInput" min="0" max="999" style="width:100%">
+      </div>
+    </div>
+    <button class="btn btn-primary" id="saveCounters">Save Counters</button>
+  </div>
+
+  <!-- Section progress overview -->
+  <div class="card">
+    <h2>Section Progress</h2>
+    <div id="sectionOverview"></div>
+  </div>
+
+  <!-- 12-Month Timeline -->
+  <div class="card">
+    <h2>12-Month Timeline</h2>
+    <div class="timeline" id="timeline">
+      <div class="timeline-item active">
+        <h4>Month 1–2 <span class="month-badge">Mar–Apr 2026</span></h4>
+        <p>OS foundations + Math foundations + Transformer implementation. OSTEP Part 1, optimization basics, attention from paper, 8–10 LeetCode.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 3–4 <span class="month-badge">May–Jun 2026</span></h4>
+        <p>Networking + PyTorch internals + Paper reading starts. HTTP/TCP, first custom autograd, first 3 papers read, Q1 project complete.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 5–6 <span class="month-badge">Jul–Aug 2026</span></h4>
+        <p>GPU programming (Triton) + Training theory + Fine-tuning deep dive. First Triton kernel, LoRA understood mathematically, Q2 complete, 2+ blog posts.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 7–8 <span class="month-badge">Sep–Oct 2026</span></h4>
+        <p>Distributed systems + Alignment papers + Inference engine project. Distributed training concepts, DPO derivation, minimal inference engine.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 9–10 <span class="month-badge">Nov–Dec 2026</span></h4>
+        <p>Advanced inference + Frontier papers + Own project begins. Q3 complete, MoE/speculative decoding, own research question, 5+ blog posts.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>Month 11–12 <span class="month-badge">Jan–Feb 2027</span></h4>
+        <p>Own project + Portfolio consolidation + Interview prep. Q4 complete, 8+ posts, 3+ OSS contributions, 80–100 LeetCode, portfolio ready.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data management -->
+  <div class="card">
+    <h2>Data Management</h2>
+    <p style="color:var(--text-dim);font-size:0.85rem;margin-bottom:1rem;">Your data is stored in your browser's localStorage. Export regularly as backup.</p>
+    <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+      <button class="btn btn-primary" id="exportBtn">Export Data</button>
+      <button class="btn btn-ghost" id="importBtn">Import Data</button>
+      <input type="file" id="importFile" accept=".json" style="display:none">
+    </div>
+  </div>
+</div>
+
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script>
+  function refreshDashboard() {
+    // Counters
+    const lc = Store.getLeetcode();
+    const papers = Store.getPapersRead();
+    const blogs = Store.getBlogPosts();
+    const oss = Store.getOSSContributions();
+    const journal = Store.getJournal().length;
+
+    document.getElementById('leetcodeCount').textContent = lc;
+    document.getElementById('papersCount').textContent = papers;
+    document.getElementById('blogCount').textContent = blogs;
+    document.getElementById('ossCount').textContent = oss;
+    document.getElementById('journalCount').textContent = journal;
+
+    document.getElementById('leetcodeInput').value = lc;
+    document.getElementById('papersInput').value = papers;
+    document.getElementById('blogInput').value = blogs;
+    document.getElementById('ossInput').value = oss;
+
+    // Section progress
+    const sections = Store.getSectionStats();
+    const container = document.getElementById('sectionOverview');
+    let totalAll = 0, doneAll = 0;
+
+    const sectionNames = {
+      'a1': 'A1 — OS & Memory',
+      'a2': 'A2 — Networking',
+      'a3': 'A3 — Low-Level PyTorch & GPU',
+      'a4': 'A4 — DSA',
+      'b1': 'B1 — Math for ML',
+      'b2': 'B2 — Paper Reading',
+      'b3': 'B3 — Model Training',
+      'q1': 'Q1 — Transformer from Scratch',
+      'q2': 'Q2 — Fine-tuning Deep Dive',
+      'q3': 'Q3 — Minimal Inference Engine',
+      'q4': 'Q4 — Your Own Idea',
+    };
+
+    let html = '';
+    for (const [key, name] of Object.entries(sectionNames)) {
+      const s = sections[key] || { total: 0, done: 0 };
+      totalAll += s.total;
+      doneAll += s.done;
+      const pct = s.total ? Math.round((s.done / s.total) * 100) : 0;
+      html += `
+        <div style="margin-bottom:0.75rem;">
+          <div class="flex-between" style="margin-bottom:0.25rem;">
+            <span style="font-size:0.85rem;">${name}</span>
+            <span style="font-size:0.8rem;color:var(--text-dim)">${s.done}/${s.total}</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" style="width:${pct}%"></div>
+          </div>
+        </div>`;
+    }
+    container.innerHTML = html || '<p class="empty-state" style="padding:1rem;">Complete items in Track A, Track B, and Projects to see progress here.</p>';
+
+    const overallPct = totalAll ? Math.round((doneAll / totalAll) * 100) : 0;
+    document.getElementById('overallPct').textContent = overallPct + '%';
+  }
+
+  // Save counters
+  document.getElementById('saveCounters').addEventListener('click', () => {
+    Store.setLeetcode(parseInt(document.getElementById('leetcodeInput').value) || 0);
+    Store.setPapersRead(parseInt(document.getElementById('papersInput').value) || 0);
+    Store.setBlogPosts(parseInt(document.getElementById('blogInput').value) || 0);
+    Store.setOSSContributions(parseInt(document.getElementById('ossInput').value) || 0);
+    refreshDashboard();
+  });
+
+  // Export
+  document.getElementById('exportBtn').addEventListener('click', () => {
+    const blob = new Blob([Store.exportAll()], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'retracker-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  // Import
+  document.getElementById('importBtn').addEventListener('click', () => {
+    document.getElementById('importFile').click();
+  });
+  document.getElementById('importFile').addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        Store.importAll(reader.result);
+        refreshDashboard();
+        alert('Data imported successfully!');
+      } catch (err) {
+        alert('Invalid file: ' + err.message);
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  refreshDashboard();
+</script>
+
+</body>
+</html>
