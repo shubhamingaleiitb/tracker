@@ -89,9 +89,7 @@ function renderNav(activePage) {
       <a class="logo" href="${prefix}index.html">RE<span>Tracker</span></a>
       <nav>
         <a href="${prefix}index.html">Dashboard</a>
-        <a href="${pagesPrefix}track-a.html">Track A</a>
-        <a href="${pagesPrefix}track-b.html">Track B</a>
-        <a href="${pagesPrefix}projects.html">Projects</a>
+        <a href="${pagesPrefix}monthly-plan.html">Monthly Plan</a>
         <a href="${pagesPrefix}journal.html">Journal</a>
         <a href="${pagesPrefix}resources.html">Resources</a>
       </nav>
